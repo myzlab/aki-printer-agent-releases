@@ -29,7 +29,7 @@ El **Agente de impresión de Akí Mismo** es una pequeña aplicación para Windo
 | 🖨️ | **Imprime al instante** los tickets que envía Akí Mismo a tus impresoras de red (ESC/POS, puerto 9100). |
 | 🔌 | **Siempre conectado**: mantiene la conexión con Akí Mismo y se reconecta solo si se cae internet. |
 | 🔄 | **Se actualiza solo**: cuando hay una versión nueva, la descarga e instala sin que tengas que hacer nada. |
-| 🔒 | **Sesión segura**: tus credenciales se guardan cifradas en tu equipo y la app está firmada por Akí Mismo. |
+| 🔒 | **Sesión segura**: tus credenciales se guardan cifradas en tu equipo. |
 | 🪶 | **Liviano y discreto**: funciona en segundo plano sin estorbar tu trabajo. |
 
 ## Requisitos
@@ -41,33 +41,11 @@ El **Agente de impresión de Akí Mismo** es una pequeña aplicación para Windo
 
 ## Instalación
 
-### 1. Instala el certificado de Akí Mismo (una sola vez por PC)
-
-El agente está firmado digitalmente por Akí Mismo. Para que Windows reconozca esa firma:
-
-1. Descarga [`AkiPrinterAgent.cer`](https://github.com/myzlab/aki-printer-agent-releases/raw/main/certificado/AkiPrinterAgent.cer) y [`install-certificate.ps1`](https://github.com/myzlab/aki-printer-agent-releases/raw/main/certificado/install-certificate.ps1) en la misma carpeta.
-2. Abre PowerShell en esa carpeta y ejecuta (pedirá permisos de administrador):
-
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\install-certificate.ps1
-   ```
-
-<details>
-<summary>¿Prefieres hacerlo a mano?</summary>
-
-1. Doble clic en `AkiPrinterAgent.cer` → **Instalar certificado…**
-2. Elige **Equipo local** → **Colocar todos los certificados en el siguiente almacén** → **Entidades de certificación raíz de confianza** → **Finalizar**.
-3. Repite los pasos, pero esta vez elige el almacén **Editores de confianza**.
-
-</details>
-
-### 2. Instala el agente
-
 1. Descarga **[AkiMismo.PrinterAgent-win-Setup.exe](https://github.com/myzlab/aki-printer-agent-releases/releases/latest/download/AkiMismo.PrinterAgent-win-Setup.exe)**.
 2. Ejecútalo. Se instala en segundos, sin pedir permisos de administrador, y crea accesos directos en el escritorio y en el menú Inicio.
 3. Inicia sesión con tu usuario de agente de impresión. ¡Listo! 🎉
 
-> Si Windows muestra **"Windows protegió su PC"**, haz clic en **Más información → Ejecutar de todas formas**. Solo puede pasar la primera vez.
+> Si Windows muestra **"Windows protegió su PC"**, haz clic en **Más información → Ejecutar de todas formas**. Solo pasa al instalar: las actualizaciones automáticas no lo muestran.
 
 ## Uso diario
 
